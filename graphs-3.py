@@ -8,6 +8,7 @@ titanic_data = pd.read_csv(titanic_link)
 fig, ax = plt.subplots()
 ax.hist(titanic_data.fare)
 st.header("Histograma del Titanic")
+ax.set_title("Distribución de Fare")
 st.pyplot(fig)
 
 fig2, ax2 = plt.subplots()

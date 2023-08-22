@@ -27,8 +27,6 @@ def filter_data_by_director(director):
     return filtered_data_director
 
 
-
-
 data_load_state = st.text('Loading cicle nyc data...')
 data = load_data(1000)
 data_load_state.text("Done! (using st.cache)")
@@ -48,7 +46,6 @@ if (btnBuscar):
    st.write(data_filme)
 
 
-
 selected_director = st.sidebar.selectbox("Seleccionar Director", data['director'].unique())
 btnFilterbyDirector = st.sidebar.button('Filtrar director ')
 
@@ -56,5 +53,4 @@ if (btnFilterbyDirector):
    filterbydir = filter_data_by_director(selected_director)
    count_row = filterbydir.shape[0]  # Gives number of rows
    st.write(f"Total filmes : {count_row}")
-
    st.dataframe(filterbydir)
