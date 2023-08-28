@@ -38,7 +38,7 @@ avg_hours_gender=(
 
 fig_hours_gender=px.bar(avg_hours_gender,
                         x=avg_hours_gender.index,
-                        y="average_work_hours", 
+                        y="average_work_hours",
                         orientation="v",
                         title="Average Worked Hours by Gender",
                         labels=dict(average_work_hours="Total Worked Hours", gender="Gender"),
